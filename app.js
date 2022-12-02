@@ -11,4 +11,4 @@ const temo = new Promise(function(resolve, reject) {
 
 temo
   .then(() => console.log('Our promise is fulfilled'))
-  .catch(() => console.log('Our promise has failed!'))
+  .catch((error) => console.log(`Our promise has failed!: ${error}`))
