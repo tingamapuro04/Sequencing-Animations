@@ -24,13 +24,23 @@ const aliceTumbling = [
 ];
 
 const aliceTiming = {
-  duration: 2000,
+  duration: 5000,
   iterations: 1,
-  fill: "forwards",
+  direction: "alternate-reverse",
+  fill: "both",
 };
 
-img_1.animate(aliceTumbling, aliceTiming)
+const jirani = img_1.animate(aliceTumbling, aliceTiming)
 
-const promise = new Promise((resolve, reject) => {
-  
-})
+const promise = new Promise((resolve) => {
+  resolve()
+});
+
+jirani.finished
+  .then(() => {
+    img_2.animate(aliceTumbling, aliceTiming)
+  })
+  .catch((error) => {
+    console.log(`${error}`)
+  })
+
