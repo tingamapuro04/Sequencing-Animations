@@ -30,17 +30,9 @@ const aliceTiming = {
   fill: "both",
 };
 
-const jirani = img_1.animate(aliceTumbling, aliceTiming)
+const first = img_1.animate(aliceTumbling, aliceTiming).finished
+const second = img_2.animate(aliceTumbling, aliceTiming).finished
+const third = img_3.animate(aliceTumbling, aliceTiming)
 
-const promise = new Promise((resolve) => {
-  resolve()
-});
 
-jirani.finished
-  .then(() => {
-    img_2.animate(aliceTumbling, aliceTiming)
-  })
-  .catch((error) => {
-    console.log(`${error}`)
-  })
 
