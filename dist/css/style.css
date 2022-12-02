@@ -11,10 +11,30 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100vh;
+  position: relative;
 }
 
 img {
   width: 200px;
   display: block;
   margin-bottom: 3%;
+}
+
+#img_1 {
+  position: absolute;
+  top: 10%;
+  left: 7%;
+}
+
+#img_2 {
+  position: absolute;
+  top: 35%;
+  left: 35%;
+}
+
+#img_3 {
+  position: absolute;
+  top: 65%;
+  left: 65%;
 }/*# sourceMappingURL=style.css.map */

@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  
-}
-
 .images  {
   background-color: #6c373f;
   width: 100%;
@@ -15,6 +11,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100vh;
+  position: relative;
 }
 
 img {
@@ -24,11 +22,19 @@ img {
 }
 
 #img_1 {
-  
+  position: absolute;
+  top: 10%;
+  left: 7%;
 }
 
 #img_2 {
+  position: absolute;
+  top: 35%;
+  left: 35%;
 }
 
 #img_3 {
+  position: absolute;
+  top: 65%;
+  left: 65%;
 }
