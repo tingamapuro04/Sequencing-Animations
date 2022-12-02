@@ -6,22 +6,15 @@
 
 body {
   
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
 }
 
 .images  {
   background-color: #6c373f;
   width: 100%;
   overflow: auto;
-  display: grid;
-  place-items: center;
-  grid-template-areas:
-    "a1 . ."
-    ". a2 ."
-    ". . a3";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 img {
@@ -31,13 +24,11 @@ img {
 }
 
 #img_1 {
-  grid-area: a1;
+  
 }
 
 #img_2 {
-  grid-area: a2;
 }
 
 #img_3 {
-  grid-area: a3;
 }
