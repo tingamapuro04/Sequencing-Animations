@@ -1,19 +1,3 @@
-const temo = new Promise(function(resolve, reject) {
-  const time1 = 20;
-  const time2 = 21;
-
-  if (time1 === 25) {
-    resolve()
-  } else {
-    reject()
-  }
-});
-
-temo
-  .then(() => console.log('Our promise is fulfilled'))
-  .catch((error) => console.log(`Our promise has failed!: ${error}`))
-
-
 const img_1 = document.querySelector('#img_1')
 const img_2 = document.querySelector('#img_2')
 const img_3 = document.querySelector('#img_3')
@@ -24,15 +8,31 @@ const aliceTumbling = [
 ];
 
 const aliceTiming = {
-  duration: 5000,
-  iterations: 1,
+  duration: 3000,
+  iterations: 2,
   direction: "alternate-reverse",
-  fill: "both",
+  fill: "backwards",
 };
 
-const first = img_1.animate(aliceTumbling, aliceTiming).finished
-const second = img_2.animate(aliceTumbling, aliceTiming).finished
-const third = img_3.animate(aliceTumbling, aliceTiming)
+const first = () => {
+  return img_1.animate(aliceTumbling, aliceTiming).finished
+} 
+const second = () => {
+  return img_2.animate(aliceTumbling, aliceTiming).finished
+} 
+const third = () => {
+  return img_3.animate(aliceTumbling, aliceTiming).finished
+} 
 
+const handleanimation = async () => {
+  try {
+    await first()
+    await second()
+    await third()
+  } catch (error) {
+    console.log(error)
+  }
+};
 
+handleanimation()
 
