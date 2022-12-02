@@ -4,60 +4,36 @@
   box-sizing: border-box;
 }
 
-.section {
+body {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.images {
+  background-color: #6c373f;
   width: 100%;
-  height: 80vh;
-  margin: 2%;
-  position: relative;
+  overflow: auto;
+  display: grid;
+  place-items: center;
+  grid-template-areas: "a1 . ." ". a2 ." ". . a3";
 }
 
-.para {
-  font-size: 2rem;
-  border-radius: 16px;
-  padding: 1% 2%;
-  color: #369cfe;
-  position: absolute;
-  animation-name: drill;
-  animation-duration: 30s;
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-direction: alternate-reverse;
+img {
+  width: 200px;
+  display: block;
+  margin-bottom: 3%;
 }
 
-@keyframes drill {
-  0% {
-    top: 0;
-    left: 0.5%;
-    font-size: 1rem;
-    background-color: green;
-  }
-  25% {
-    top: 0;
-    left: 70%;
-    color: green;
-    font-size: 1.9rem;
-    background-color: #369cfe;
-  }
-  50% {
-    top: 80%;
-    left: 70%;
-    color: red;
-    font-size: 1.6rem;
-    background-color: black;
-  }
-  75% {
-    top: 80%;
-    left: 0.5%;
-    color: black;
-    font-size: 1.9rem;
-    background-color: red;
-  }
-  100% {
-    top: 0;
-    left: 0.5%;
-    color: #369cfe;
-    font-size: 1rem;
-    color: greenyellow;
-  }
+#img_1 {
+  grid-area: a1;
+}
+
+#img_2 {
+  grid-area: a2;
+}
+
+#img_3 {
+  grid-area: a3;
 }/*# sourceMappingURL=style.css.map */
