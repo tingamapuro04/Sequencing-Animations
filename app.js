@@ -1,6 +1,7 @@
 const img_1 = document.querySelector('#img_1')
 const img_2 = document.querySelector('#img_2')
 const img_3 = document.querySelector('#img_3')
+const rotation = document.querySelector('#rotations');
 
 const aliceTumbling = [
   { transform: "rotate(0) scale(1)" },
@@ -35,4 +36,5 @@ const handleanimation = async () => {
 };
 
 handleanimation()
+
 
